@@ -71,8 +71,8 @@ function MainCityCamera:Init()
 	
 	local go = GameObject.Find("CameraContainer");
 	self.camera = go.transform;
-	self.camera.localPosition = Vector3.New(-1.54, 5.06, -23.37);
-	self.camera.localEulerAngles = Vector3.New(351.9, 7.68, 0);
+	-- self.camera.localPosition = Vector3.New(-1.54, 5.06, -23.37);
+	-- self.camera.localEulerAngles = Vector3.New(351.9, 7.68, 0);
 	-- local anim = self.camera:GetComponent(UnityEngine.Animation.GetClassType());
 	--self.cameraContro = go:AddComponent(CameraController.GetClassType());
 	-- anim.enabled = true;
@@ -407,6 +407,7 @@ end
 
 
 function MainCityCamera:OnDrag(evt)
+	Log.e('11111111111')
 	-- 做教程的时候，不能拖动屏幕
 	if TutorialDialog.GetInstance():IsDoingTutorial() or UIManager.Instance.IsSkipUIAction then return end
 
