@@ -93,7 +93,7 @@ public class TestCameralCtrl : MonoBehaviour {
             float movingX = delta.x * movingRatio.x * speed;
             float movingY = delta.y * movingRatio.y * speed;
             //targetMovingPos = startMovingPos + cameraRotDistant * new Vector3(-movingX, 0, -movingY);
-            targetMovingPos = startMovingPos + new Vector3(movingX, 0, movingY);
+            targetMovingPos = startMovingPos + new Vector3(-movingX, 0, -movingY);
         }
 
         Vector3 pos = currMovingPos;
